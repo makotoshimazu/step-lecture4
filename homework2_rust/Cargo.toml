@@ -1,0 +1,6 @@
+[package]
+name = "homework2_rust"
+version = "0.1.0"
+authors = ["Makoto Shimazu <makoto.shimaz@gmail.com>"]
+
+[dependencies]
