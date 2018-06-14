@@ -2,7 +2,7 @@ Usage
 --
 
 ```
-$ g++ -std=c++11 shortest.cc
+$ g++ -std=c++14 shortest.cc
 $ ./a.out
 ```
 
