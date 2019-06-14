@@ -1,3 +1,4 @@
+//! clang++ -std=c++14 -Wall -Wextra shortest.cc
 #include <sys/time.h>
 
 #include <cstdio>
@@ -31,7 +32,7 @@ class Vertex {
   }
 
   const std::vector<int>& edges() const { return edges_; }
-  
+
  private:
   std::vector<int> edges_;
 };
@@ -120,7 +121,7 @@ class Graph {
       names.push_back(name);
     }
     graph->names_ = std::move(names);
-    
+
     return graph;
   }
 
@@ -150,7 +151,7 @@ class Graph {
     }
     return std::vector<int>();
   }
-  
+
   std::vector<Vertex> vertexes_;
   std::vector<std::string> names_;
 };
@@ -174,7 +175,7 @@ class Timer {
               << end - begin_ << " sec" << std::endl;
     std::cout << "==== End: " << tag_ << " ====" << std::endl;
   }
-  
+
  private:
   double begin_;
   std::string tag_;
@@ -194,17 +195,18 @@ int main() {
     std::cout << "num vertexes: " << graph->vertexes().size() << " "
               << "num edges: " << n_edges << std::endl;
   }
-  
 
   // 457783: Google
-  // 17821: ディズニーランド
+  // 22557: 渋谷
+  const int kGoogleId = 457783;
+  const int kShibuyaId = 22557;
   {
-    Timer t("Google -> Disney");
-    graph->PrintShortestPath(457783, 17821);
+    Timer t("Google -> 渋谷");
+    graph->PrintShortestPath(kGoogleId, kShibuyaId);
   }
   {
-    Timer t("Disney -> Google");
-    graph->PrintShortestPath(17821, 457783);
+    Timer t("渋谷 -> Google");
+    graph->PrintShortestPath(kShibuyaId, kGoogleId);
   }
 
   while (true) {

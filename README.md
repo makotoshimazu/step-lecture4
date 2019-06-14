@@ -1,4 +1,4 @@
-STEP2017 - Lecture 4: Algorithms and data structures 2
+STEP2019 - Lecture 4: Algorithms and data structures 2
 ====
 
 Contents
@@ -6,4 +6,5 @@ Contents
 
  * README.md: This file
  * .gitignore: A setting file to let git know which files should be ignored
- * pagerank.cpp: A program to calculate the naive page rank explained at the lecture
+ * homework1-*/: sample programs for homework1 (Dummy SNS)
+ * homework2-*/: sample programs for homework2 (wikipedia)

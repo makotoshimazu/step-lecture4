@@ -160,6 +160,7 @@ class Graph {
     std::ofstream links("out_links.txt");
     if (pages.fail() || links.fail()) {
       std::cerr << "something happened" << std::endl;
+      return;
     }
     for (size_t i = 0; i < visited.size(); i++) {
       if (visited[i]) {
