@@ -16,10 +16,6 @@ const char* NICKNAMES_TXT_PATH = "nicknames.txt";
 class Vertex {
  public:
   Vertex(std::vector<int> edges) : edges_(std::move(edges)) {}
-  Vertex(Vertex&& other) : edges_(std::move(other.edges_)) {}
-  void operator=(Vertex&& other) {
-    edges_ = std::move(other.edges_);
-  }
 
   void PrintEdges() const {
     std::cout << "{";
@@ -196,7 +192,7 @@ int main() {
               << "num edges: " << n_edges << std::endl;
   }
 
-  std::cout << "jacob's id: 23" << std::endl;
+  std::cout << "adrian's id: 1" << std::endl;
 
   while (true) {
     int from, to;

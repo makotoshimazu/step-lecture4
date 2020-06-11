@@ -5,3 +5,5 @@ wikipedia_links.zip
 .clang_complete
 a.out
 bin/
+.DS_Store
+.python-version
