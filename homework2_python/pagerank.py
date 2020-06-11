@@ -20,7 +20,8 @@ class Page():
   def weight(self):
     return self._weight
 
-  # Returns the score that will be distributed to all other nodes.
+  # Distribute most of the score to the neighbours and return the rest of the
+  # score that will be distributed to all other nodes.
   def distribute(self):
     if len(self._linked_pages) == 0:
       return self._weight
@@ -71,7 +72,7 @@ def main():
   after = time.time()
   print('Read links: %.3f [s]'%((after - before)))
 
-  for step in range(10):
+  for step in range(20):
     before = time.time()
     step_pagerank(pages)
     after = time.time()
